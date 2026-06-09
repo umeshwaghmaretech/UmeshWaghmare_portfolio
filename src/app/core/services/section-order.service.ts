@@ -9,7 +9,6 @@ export type SectionId =
   | 'projects'
   | 'github'
   | 'work-with-me'
-  | 'resume'
   | 'certifications'
   | 'contact';
 
@@ -19,7 +18,6 @@ const DEFAULT_ORDER: SectionId[] = [
   'experience',
   'projects',
   'github',
-  'resume',
   'certifications',
   'contact',
   'work-with-me',

@@ -15,7 +15,6 @@ const DEFER_SECTION_IDS = [
   'projects',
   'github',
   'work-with-me',
-  'resume',
   'certifications',
   'contact',
 ];

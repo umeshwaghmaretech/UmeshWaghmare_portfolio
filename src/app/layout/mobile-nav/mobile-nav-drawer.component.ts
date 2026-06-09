@@ -6,8 +6,8 @@ import {
   output,
 } from '@angular/core';
 import { NavigationService } from '../../core/services/navigation.service';
-import { PortfolioDataService } from '../../core/services/portfolio-data.service';
-import { NavSection } from '../../core/models/portfolio.models';
+import { ThemeService } from '../../core/services/theme.service';
+import { NavSection, ThemeMode } from '../../core/models/portfolio.models';
 import { UiDrawerComponent } from '../../shared/ui/drawer/ui-drawer.component';
 import { GithubIconComponent } from '../../shared/github/github-icon.component';
 
@@ -42,6 +42,24 @@ import { GithubIconComponent } from '../../shared/github/github-icon.component';
           }
         }
       </nav>
+
+      <section class="mobile-nav__theme" aria-label="Theme selection">
+        <h3 class="mobile-nav__theme-title">Theme</h3>
+        <div class="mobile-nav__theme-switcher" role="group" aria-label="Choose theme">
+          @for (t of theme.themes; track t.id) {
+            <button
+              type="button"
+              class="mobile-nav__theme-btn"
+              [class.active]="theme.theme() === t.id"
+              [attr.aria-pressed]="theme.theme() === t.id"
+              [attr.aria-label]="t.label + ' theme'"
+              (click)="selectTheme(t.id)"
+            >
+              {{ t.label }}
+            </button>
+          }
+        </div>
+      </section>
     </ui-drawer>
   `,
   styles: `
@@ -78,10 +96,63 @@ import { GithubIconComponent } from '../../shared/github/github-icon.component';
     .mobile-nav__link--external {
       color: var(--color-accent);
     }
+
+    .mobile-nav__theme {
+      margin-top: var(--space-xl);
+      padding-top: var(--space-lg);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .mobile-nav__theme-title {
+      margin: 0 0 var(--space-sm);
+      padding-inline: var(--space-md);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-text-muted);
+    }
+
+    .mobile-nav__theme-switcher {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+      padding-inline: var(--space-sm);
+    }
+
+    .mobile-nav__theme-btn {
+      min-height: 2.75rem;
+      padding: var(--space-sm) var(--space-md);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      font-family: inherit;
+      text-align: left;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      background: var(--color-surface);
+      color: var(--color-text-muted);
+      cursor: pointer;
+      transition:
+        background var(--transition-fast),
+        color var(--transition-fast),
+        border-color var(--transition-fast);
+
+      &.active {
+        background: var(--color-accent-subtle);
+        border-color: var(--color-accent);
+        color: var(--color-accent);
+      }
+
+      &:focus-visible {
+        outline: 2px solid var(--color-accent);
+        outline-offset: 2px;
+      }
+    }
   `,
 })
 export class MobileNavDrawerComponent {
   private readonly nav = inject(NavigationService);
+  readonly theme = inject(ThemeService);
 
   readonly open = input(false);
   readonly activeSection = input('hero');
@@ -92,5 +163,9 @@ export class MobileNavDrawerComponent {
     event.preventDefault();
     this.nav.scrollToSection(link.id);
     this.close.emit();
+  }
+
+  selectTheme(mode: ThemeMode): void {
+    this.theme.setTheme(mode);
   }
 }
