@@ -1,0 +1,29 @@
+[
+  {
+    "id": "e1",
+    "name": "Post Graduate Diploma in Advanced Computing (PG-DAC)",
+    "issuer": "CDAC — AIT YCP, Mumbai",
+    "date": "2019",
+    "credentialId": "60.00%"
+  },
+  {
+    "id": "e2",
+    "name": "Bachelor of Engineering — Computer Science & Engineering",
+    "issuer": "MIT, Aurangabad",
+    "date": "2018",
+    "credentialId": "CGPA 5.69"
+  },
+  {
+    "id": "e3",
+    "name": "Higher Secondary Certificate (HSC)",
+    "issuer": "Vidyadham Science Jr. College, Aurangabad",
+    "date": "2014"
+  },
+  {
+    "id": "e4",
+    "name": "Secondary School Certificate (SSC)",
+    "issuer": "S.B. High School, Aurangabad",
+    "date": "2011",
+    "credentialId": "61.65%"
+  }
+]

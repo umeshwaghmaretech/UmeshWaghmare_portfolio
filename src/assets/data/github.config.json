@@ -1,0 +1,15 @@
+{
+  "username": "umeshwaghmaretech",
+  "profileUrl": "https://github.com/umeshwaghmaretech",
+  "pinnedRepos": [],
+  "featuredRepos": [],
+  "categories": [
+    { "id": "angular", "label": "Angular Projects", "keywords": ["angular", "ng-"] },
+    { "id": "dotnet", "label": ".NET Projects", "keywords": ["dotnet", "csharp", "asp.net", "net-", "c#"] },
+    { "id": "ba", "label": "Business Analysis Projects", "keywords": ["ba", "requirements", "analysis", "business"] },
+    { "id": "product", "label": "Product Thinking Projects", "keywords": ["product", "portfolio", "saas"] },
+    { "id": "ai", "label": "AI/Experiment Projects", "keywords": ["ai", "ml", "chat", "gen", "gpt"] },
+    { "id": "learning", "label": "Learning Projects", "keywords": ["learn", "tutorial", "practice", "demo", "sample"] }
+  ],
+  "defaultCategory": "learning"
+}

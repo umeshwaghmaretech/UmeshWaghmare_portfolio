@@ -1,0 +1,39 @@
+{
+  "name": "Umesh Deepak Waghmare",
+  "title": "Full Stack .NET Developer | Angular | Azure | REST APIs",
+  "summary": "6+ years designing and developing enterprise-grade web applications using .NET Core, C#, Angular, TypeScript, and SQL Server — with strong expertise in Azure, microservices, and AI-enabled integrations.",
+  "email": "umesh.waghmare.tech@gmail.com",
+  "phone": "+91 9503432089",
+  "linkedIn": "https://linkedin.com/in/umesh-waghmare",
+  "github": "https://github.com/umeshwaghmaretech",
+  "location": "Pune, India",
+  "profileImageUrl": "assets/images/umesh-profile.jpeg",
+  "resumePdfUrl": "assets/resume/umeshdwaghmare_2026_aus.pdf",
+  "careerNarrative": "My career began as a Software Developer Trainee at Ixia Solutions, building student management systems with AngularJS and ASP.NET Core. I progressed through roles at Fincuro, Extentia, and Anthology — delivering flight booking platforms, automotive portals, and large-scale university management systems. Today at Pepper Advantage, I work as a Full Stack Developer on enterprise loan processing and AI-powered platforms, owning end-to-end delivery across Dev, UAT, and Production environments.",
+  "timeline": [
+    {
+      "id": "foundation",
+      "phase": "Foundation",
+      "title": "Software Developer Trainee",
+      "period": "2019 — 2020",
+      "description": "Started career at Ixia Solutions building CampusNexus — a student management portal migrated from desktop VB6 to web-based SOA architecture.",
+      "progress": 70
+    },
+    {
+      "id": "growth",
+      "phase": "Growth",
+      "title": "Software Developer / Professional",
+      "period": "2021 — 2023",
+      "description": "Delivered enterprise applications at Fincuro, Extentia, and Anthology — flight booking, automotive portals, and international student management systems.",
+      "progress": 85
+    },
+    {
+      "id": "present",
+      "phase": "Present",
+      "title": "Full Stack Developer",
+      "period": "2024 — Present",
+      "description": "Building LoanGuard, GenChat, and AI-enabled enterprise platforms at Pepper Advantage with .NET Core, Angular 16, Azure, and microservices.",
+      "progress": 92
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+[
+  {
+    "id": "p1",
+    "slug": "loanguard",
+    "title": "LoanGuard",
+    "subtitle": "Enterprise loan processing platform",
+    "description": "Enterprise loan processing application with AI/ML microservices for document verification, risk analysis, and automated decision-making integrated with Azure services.",
+    "image": "assets/images/project-agile.svg",
+    "techStack": [".NET Core", "Angular", "AngularJS", "SQL Server", "Azure AD", "Azure Blob Storage", "Python AI/ML"],
+    "features": [
+      "Loan processing modules and workflow automation",
+      "AI/ML document verification and risk analysis",
+      "Azure Blob Storage document upload and processing",
+      "Azure AD authentication with Microsoft Graph API"
+    ],
+    "challenges": [
+      "Integrating AI/ML microservices with legacy Database-First EF application",
+      "Handling large datasets and high concurrent users in production"
+    ],
+    "learnings": [
+      "Optimizing SQL queries, LINQ operations, and API performance at scale",
+      "Production support patterns for critical enterprise financial systems"
+    ],
+    "featured": true,
+    "bentoSize": "large"
+  },
+  {
+    "id": "p2",
+    "slug": "loanguard-lens",
+    "title": "LoanGuard Lens",
+    "subtitle": "Multi-tenant lease onboarding system",
+    "description": "Built from scratch — a multi-tenant lease and onboarding system with dynamic rule engine, microservices architecture, and Angular 16 dashboards for analytics and reporting.",
+    "image": "assets/images/project-requirements.svg",
+    "techStack": ["Angular 16", "ASP.NET Core", "EF Core Code-First", "SQL Server", "Microservices", "Azure AD"],
+    "features": [
+      "Multi-tenant system with client-specific configurations",
+      "Dynamic rule engine for custom workflows and decision logic",
+      "Interactive dashboards with charts and analytics",
+      "Automated reporting based on rule engine outputs"
+    ],
+    "challenges": [
+      "Designing database schema and migration strategies from scratch",
+      "Building scalable microservices for high-volume data processing"
+    ],
+    "learnings": [
+      "Code-First EF Core patterns for greenfield enterprise applications",
+      "Role-based dynamic UI rendering across multiple tenants"
+    ],
+    "featured": true,
+    "bentoSize": "large"
+  },
+  {
+    "id": "p3",
+    "slug": "genchat",
+    "title": "GenChat — AI Assistant Platform",
+    "subtitle": "Enterprise AI-powered communication",
+    "description": "AI-powered assistant platform enabling real-time communication, document-based AI responses, and analytics-driven insights in a multi-client enterprise environment.",
+    "image": "assets/images/project-shopify.svg",
+    "techStack": ["Angular", "ASP.NET Core", "Azure AD", "WebSockets", "Azure Blob Storage", "Azure Boards"],
+    "features": [
+      "Real-time Ops Chat with WebSockets and AI document responses",
+      "Multi-tenant architecture with configurable workflows",
+      "Customer survey analysis with graph-based visualization",
+      "Incident Dashboard integrated with Azure Boards"
+    ],
+    "challenges": [
+      "Ensuring low-latency, scalable messaging for real-time AI chat",
+      "Processing documents from Azure Blob Storage for contextual AI responses"
+    ],
+    "learnings": [
+      "Clean architecture and SOLID principles for AI-enabled enterprise systems",
+      "Integrating Azure Boards for sprint-level analysis and reporting"
+    ],
+    "featured": true,
+    "bentoSize": "medium"
+  },
+  {
+    "id": "p4",
+    "slug": "anthology-student-international",
+    "title": "Anthology Student International",
+    "subtitle": "University student management portal",
+    "description": "Web-based student management portal for US and international universities — migrated from legacy desktop VB6 to SOA architecture serving students, faculty, and administrators.",
+    "image": "assets/images/project-crm.svg",
+    "techStack": ["AngularJS", "ASP.NET Core MVC", "Entity Framework", "OData", "SQL Server 2019"],
+    "features": [
+      "Online gateway for academics, career placement, and office applications",
+      "Course and instructor assignment for class sections",
+      "Student, staff, and employer portal access",
+      "Agile SOA architecture with jQuery integration"
+    ],
+    "challenges": [
+      "Migrating complex legacy VB6 desktop application to modern web platform",
+      "Performance improvement with large-scale student data"
+    ],
+    "learnings": [
+      "SOA migration strategies for enterprise legacy systems",
+      "Live production incident resolution at university scale"
+    ],
+    "featured": true,
+    "bentoSize": "medium"
+  },
+  {
+    "id": "p5",
+    "slug": "letsgo2",
+    "title": "LetsGo2",
+    "subtitle": "Flight & hotel booking platform",
+    "description": "Flight booking and hotel booking website with special tourist packages for European countries — a user-friendly travel guide platform.",
+    "image": "assets/images/project-agile.svg",
+    "techStack": ["Angular 7", "ASP.NET Core MVC", "Web API", "Entity Framework", "SQL Server"],
+    "features": [
+      "Single Page Application with dynamic responsive UI",
+      "RESTful Web Services integration",
+      "Package management with NPM and package.json",
+      "Agile Scrum development with Git and JIRA"
+    ],
+    "challenges": [
+      "Building performant SPA for multi-country European tourism market",
+      "Client-side state management across booking workflows"
+    ],
+    "learnings": [
+      "End-to-end SDLC in Agile with direct client collaboration",
+      "Async/await patterns and lifecycle methods in Angular SPAs"
+    ],
+    "featured": false,
+    "bentoSize": "small"
+  },
+  {
+    "id": "p6",
+    "slug": "mahindra-auto",
+    "title": "Mahindra Auto",
+    "subtitle": "Automotive product exploration portal",
+    "description": "User-facing automotive website where end users explore Mahindra products, book test drives for specific slots, and reserve vehicles online.",
+    "image": "assets/images/project-shopify.svg",
+    "techStack": ["Angular 7", "ASP.NET Core MVC", "Web API", "Entity Framework", "SQL Server"],
+    "features": [
+      "Product exploration and information browsing",
+      "Test drive slot booking system",
+      "Online product reservation workflow",
+      "Responsive SPA with Entity Framework backend"
+    ],
+    "challenges": [
+      "Slot availability management for test drive bookings",
+      "Integrating product catalog with booking reservation flow"
+    ],
+    "learnings": [
+      "NPM dependency management for enterprise Angular applications",
+      "Client-facing feature delivery in Agile sprint cycles"
+    ],
+    "featured": false,
+    "bentoSize": "small"
+  },
+  {
+    "id": "p7",
+    "slug": "first-west-rdo",
+    "title": "First West RDO",
+    "subtitle": "US credit union financial platform",
+    "description": "Web-based financial product for US citizens verifying identity and registering for credit union finance activities — built with EF6 Code-First approach.",
+    "image": "assets/images/project-requirements.svg",
+    "techStack": ["AngularJS", "ASP.NET Core MVC", "Entity Framework 6", "SQL Server", "Swagger API"],
+    "features": [
+      "Identity verification for US credit union registration",
+      "Integration API development connecting application modules",
+      "UI screen development with jQuery and MVC5",
+      "Client-server architecture with Swagger API documentation"
+    ],
+    "challenges": [
+      "Compliance requirements for US financial identity verification",
+      "Integration API design across multiple application modules"
+    ],
+    "learnings": [
+      "EF6 Code-First patterns for financial domain applications",
+      "API-first development with Swagger documentation"
+    ],
+    "featured": false,
+    "bentoSize": "small"
+  },
+  {
+    "id": "p8",
+    "slug": "campusnexus",
+    "title": "CampusNexus",
+    "subtitle": "Student management information system",
+    "description": "Student curriculum management system — migrated from desktop VB6 to web-based SOA portal serving US university students, faculty, staff, and employers.",
+    "image": "assets/images/project-crm.svg",
+    "techStack": ["AngularJS", "ASP.NET Core MVC", "Entity Framework", "LINQ", "SQL Server"],
+    "features": [
+      "Campus portal for academics and career placement",
+      "Course and instructor assignment management",
+      "Unit testing with MOQ and integration tests",
+      "Agile SOA architecture migration from legacy desktop"
+    ],
+    "challenges": [
+      "Understanding and migrating complex legacy desktop application logic",
+      "Writing comprehensive unit and integration test coverage"
+    ],
+    "learnings": [
+      "Foundation in enterprise SOA patterns and Agile development",
+      "Test-driven development with MOQ for ASP.NET Core applications"
+    ],
+    "featured": false,
+    "bentoSize": "small"
+  }
+]

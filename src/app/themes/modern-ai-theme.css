@@ -1,0 +1,36 @@
+@layer theme {
+  :root[data-theme='modern-ai'] {
+    --color-bg: #0a0a0f;
+    --color-bg-subtle: #12121a;
+    --color-bg-muted: #1a1a24;
+    --color-surface: color-mix(in srgb, #ffffff 6%, #0a0a0f);
+    --color-surface-elevated: color-mix(in srgb, #ffffff 10%, #12121a);
+    --color-border: color-mix(in srgb, #ffffff 12%, transparent);
+    --color-border-strong: color-mix(in srgb, #ffffff 20%, transparent);
+    --color-text: #f1f5f9;
+    --color-text-muted: #94a3b8;
+    --color-text-subtle: #64748b;
+    --color-accent: #818cf8;
+    --color-accent-hover: #a5b4fc;
+    --color-accent-subtle: color-mix(in srgb, #818cf8 15%, transparent);
+    --color-accent-text: #0a0a0f;
+    --color-success: #34d399;
+    --color-error: #f87171;
+    --shadow-sm: 0 1px 2px color-mix(in srgb, #000 40%, transparent);
+    --shadow-card: 0 4px 24px color-mix(in srgb, #818cf8 12%, transparent);
+    --shadow-lg: 0 20px 50px color-mix(in srgb, #000 50%, transparent);
+    --shadow-glow: 0 0 40px color-mix(in srgb, #818cf8 25%, transparent);
+    --glass-bg: color-mix(in srgb, #ffffff 8%, transparent);
+    --glass-border: color-mix(in srgb, #ffffff 15%, transparent);
+    --glass-blur: 16px;
+    --gradient-hero: radial-gradient(ellipse at 20% 50%, color-mix(in srgb, #818cf8 20%, transparent), transparent 50%),
+      radial-gradient(ellipse at 80% 20%, color-mix(in srgb, #c084fc 15%, transparent), transparent 40%),
+      radial-gradient(ellipse at 60% 80%, color-mix(in srgb, #38bdf8 10%, transparent), transparent 40%),
+      #0a0a0f;
+    --gradient-accent: linear-gradient(135deg, #818cf8, #c084fc, #38bdf8);
+    --header-bg: color-mix(in srgb, #0a0a0f 80%, transparent);
+    --font-weight-heading: 600;
+    --card-padding: var(--space-lg);
+    --section-gap: var(--space-section);
+  }
+}

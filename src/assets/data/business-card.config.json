@@ -1,0 +1,26 @@
+{
+  "cardTitle": "Full Stack Developer | Angular | .NET | Azure | Deployment",
+  "tagline": "Building scalable web applications from idea to production deployment.",
+  "availability": "Open to Freelance & Collaboration",
+  "helpHeading": "How I Can Help",
+  "helpItems": [
+    {
+      "title": "Technical Consulting & Collaboration",
+      "description": "Helping startups, businesses, and teams plan, improve, and scale digital solutions through practical technical guidance, solution planning, and strategic collaboration."
+    },
+    {
+      "title": "End-to-End Product Development",
+      "description": "Transforming ideas into production-ready digital solutions — from planning and architecture to development, deployment, and optimization."
+    },
+    {
+      "title": "Product Thinking & Business Analysis",
+      "description": "Converting business requirements into structured technical solutions through requirement analysis, workflows, Agile collaboration, feature planning, and documentation."
+    },
+    {
+      "title": "Engineering, Deployment & Optimization",
+      "description": "Building modern, scalable web solutions with responsive Angular UI, secure backend systems, APIs, third-party integrations, Azure deployment, CI/CD, and performance optimization for seamless user experiences."
+    }
+  ],
+  "portfolioUrl": "https://github.com/umeshwaghmaretech",
+  "qrTargetUrl": "/"
+}

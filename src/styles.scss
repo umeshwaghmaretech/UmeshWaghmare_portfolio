@@ -1,0 +1,87 @@
+@use './styles/mixins';
+@use './styles/animations';
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: var(--font-weight-heading);
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+p {
+  margin: 0 0 var(--space-md);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+
+  &:hover {
+    color: var(--color-accent-hover);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-md);
+  z-index: 1000;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+
+  &:focus {
+    top: var(--space-md);
+  }
+}
+
+.container {
+  @include mixins.container;
+}
+
+.section {
+  @include mixins.section-padding;
+  scroll-margin-top: calc(var(--header-height) + var(--space-md));
+}
+
+.section__inner {
+  @include mixins.container;
+}
+
+::selection {
+  background: var(--color-accent-subtle);
+  color: var(--color-text);
+}
+
+.pdf-export-hidden {
+  visibility: hidden !important;
+}
+
+body.pdf-export-mode {
+  overflow: visible !important;
+}
