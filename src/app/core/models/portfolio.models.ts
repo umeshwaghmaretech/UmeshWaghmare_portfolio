@@ -93,7 +93,6 @@ export const DEFAULT_SECTIONS: NavSection[] = [
   { id: 'experience', label: 'Experience', href: '#experience' },
   { id: 'projects', label: 'Projects', href: '#projects' },
   { id: 'github', label: 'GitHub', href: 'https://github.com/umeshwaghmaretech', external: true },
-  { id: 'resume', label: 'Resume', href: '#resume' },
   { id: 'certifications', label: 'Education', href: '#certifications' },
   { id: 'contact', label: 'Contact', href: '#contact' },
   { id: 'work-with-me', label: 'Work With Me', href: '#work-with-me' },

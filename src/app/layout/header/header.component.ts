@@ -11,7 +11,6 @@ import { ThemeService } from '../../core/services/theme.service';
 import { ScrollSpyService } from '../../core/services/scroll-spy.service';
 import { NavigationService } from '../../core/services/navigation.service';
 import { PortfolioDataService } from '../../core/services/portfolio-data.service';
-import { PdfExportFacadeService } from '../../core/services/pdf/pdf-export.facade';
 import { UiButtonComponent } from '../../shared/ui/button/ui-button.component';
 import { MobileNavDrawerComponent } from '../mobile-nav/mobile-nav-drawer.component';
 import { BusinessCardService } from '../../core/services/business-card.service';
@@ -89,26 +88,18 @@ import { ThemeMode } from '../../core/models/portfolio.models';
               </button>
             }
           </div>
-          <ui-button variant="ghost" size="sm" (clicked)="openCommandPalette.emit()">
-            <kbd>Ctrl+K</kbd>
-          </ui-button>
 
-          <div class="header__resume-actions">
-            <ui-button variant="outline" size="sm" (clicked)="viewOnline()">
-              <span class="header__action-label header__action-label--long">View Online</span>
-              <span class="header__action-label header__action-label--short">Resume</span>
+          <div class="header__actions-end">
+            <ui-button variant="ghost" size="sm" (clicked)="openCommandPalette.emit()">
+              Section
             </ui-button>
-            <ui-button
-              size="sm"
-              [loading]="pdfExport.exporting()"
-              (clicked)="downloadPdf()"
-            >
-              <span class="header__action-label header__action-label--long">Download PDF</span>
-              <span class="header__action-label header__action-label--short">PDF</span>
-            </ui-button>
-            @if (pdfExport.exportError(); as err) {
-              <span class="header__pdf-error" role="alert">{{ err }}</span>
-            }
+
+            <div class="header__resume-actions">
+              <ui-button variant="outline" size="sm" (clicked)="viewOnline()">
+                <span class="header__action-label header__action-label--long">View Online</span>
+                <span class="header__action-label header__action-label--short">Snapshot</span>
+              </ui-button>
+            </div>
           </div>
         </div>
       </div>
@@ -287,6 +278,33 @@ import { ThemeMode } from '../../core/models/portfolio.models';
       flex-shrink: 0;
     }
 
+    .header__actions-end {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 1279px) {
+      .header__actions {
+        flex: 1;
+        min-width: 0;
+        justify-content: flex-end;
+      }
+
+      .header__menu-btn {
+        margin-right: auto;
+      }
+
+      .header__actions-end {
+        margin-left: auto;
+      }
+
+      .theme-switcher {
+        display: none !important;
+      }
+    }
+
     @media (min-width: 1536px) {
       .header__actions {
         gap: var(--space-sm);
@@ -298,14 +316,6 @@ import { ThemeMode } from '../../core/models/portfolio.models';
       align-items: center;
       gap: var(--space-xs);
       flex-wrap: wrap;
-    }
-
-    .header__pdf-error {
-      flex-basis: 100%;
-      font-size: var(--text-xs);
-      color: var(--color-error);
-      max-width: 12rem;
-      line-height: 1.3;
     }
 
     .header__action-label--short {
@@ -451,15 +461,6 @@ import { ThemeMode } from '../../core/models/portfolio.models';
         display: flex;
       }
     }
-
-    kbd {
-      font-family: var(--font-mono);
-      font-size: var(--text-xs);
-      padding: 2px 6px;
-      border-radius: var(--radius-sm);
-      background: var(--color-bg-muted);
-      border: 1px solid var(--color-border);
-    }
   `,
 })
 export class HeaderComponent {
@@ -467,15 +468,14 @@ export class HeaderComponent {
   readonly scrollSpy = inject(ScrollSpyService);
   readonly nav = inject(NavigationService);
   readonly profile = inject(PortfolioDataService).profile;
-  readonly pdfExport = inject(PdfExportFacadeService);
 
   readonly openCommandPalette = output<void>();
   readonly mobileNavOpen = signal(false);
   readonly headerNavSections = this.nav.sections.filter(
-    (s) => s.id !== 'hero' && s.id !== 'github' && s.id !== 'resume',
+    (s) => s.id !== 'hero' && s.id !== 'github',
   );
   readonly mobileNavSections = this.nav.sections.filter(
-    (s) => s.id !== 'github' && s.id !== 'resume',
+    (s) => s.id !== 'github',
   );
   private readonly businessCard = inject(BusinessCardService);
   private readonly router = inject(Router);
@@ -486,10 +486,6 @@ export class HeaderComponent {
 
   viewOnline(): void {
     void this.router.navigate(['/resume']);
-  }
-
-  downloadPdf(): void {
-    void this.pdfExport.downloadPdf();
   }
 
   themeShortLabel(id: ThemeMode): string {

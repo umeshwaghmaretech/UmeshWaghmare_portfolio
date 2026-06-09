@@ -14,7 +14,6 @@ import { ExperienceSectionComponent } from './sections/experience/experience-sec
 import { ProjectsSectionComponent } from './sections/projects/projects-section.component';
 import { GithubSectionComponent } from './sections/github/github-section.component';
 import { WorkWithMeSectionComponent } from './sections/work-with-me/work-with-me-section.component';
-import { ResumeSectionComponent } from './sections/resume/resume-section.component';
 import { CertificationsSectionComponent } from './sections/certifications/certifications-section.component';
 import { ContactSectionComponent } from './sections/contact/contact-section.component';
 import { HeaderComponent } from '../../layout/header/header.component';
@@ -35,7 +34,6 @@ import { BusinessCardComponent } from '../../layout/business-card/business-card.
     ProjectsSectionComponent,
     GithubSectionComponent,
     WorkWithMeSectionComponent,
-    ResumeSectionComponent,
     CertificationsSectionComponent,
     ContactSectionComponent,
     HeaderComponent,
@@ -96,13 +94,6 @@ import { BusinessCardComponent } from '../../layout/business-card/business-card.
               @case ('work-with-me') {
                 @defer (on viewport) {
                   <app-work-with-me-section />
-                } @placeholder {
-                  <div [id]="sectionId" class="defer-placeholder section" aria-hidden="true"></div>
-                }
-              }
-              @case ('resume') {
-                @defer (on viewport) {
-                  <app-resume-section />
                 } @placeholder {
                   <div [id]="sectionId" class="defer-placeholder section" aria-hidden="true"></div>
                 }

@@ -30,7 +30,7 @@ import { CommandItem } from '../../core/models/portfolio.models';
           #searchInput
           type="search"
           class="cmd-palette__input"
-          placeholder="Search sections, skills, projects..."
+          placeholder="Search sections, projects, options..."
           [value]="query()"
           (input)="onQuery($event)"
           (keydown)="onKeydown($event)"
@@ -45,7 +45,7 @@ import { CommandItem } from '../../core/models/portfolio.models';
               (click)="execute(item)"
               (mouseenter)="selectedIndex.set(i)"
             >
-              <span class="cmd-palette__category">{{ item.category }}</span>
+              <span class="cmd-palette__category">{{ categoryLabel(item.category) }}</span>
               <span class="cmd-palette__label">{{ item.label }}</span>
             </li>
           } @empty {
@@ -98,7 +98,7 @@ import { CommandItem } from '../../core/models/portfolio.models';
       list-style: none;
       margin: 0;
       padding: var(--space-sm);
-      max-height: 320px;
+      max-height: min(60dvh, 420px);
       overflow-y: auto;
     }
 
@@ -119,9 +119,9 @@ import { CommandItem } from '../../core/models/portfolio.models';
     .cmd-palette__category {
       font-size: var(--text-xs);
       font-weight: 600;
-      text-transform: uppercase;
       color: var(--color-text-subtle);
-      min-width: 4rem;
+      min-width: 4.5rem;
+      flex-shrink: 0;
     }
 
     .cmd-palette__label {
@@ -174,36 +174,51 @@ export class CommandPaletteComponent {
       category: 'section' as const,
       href: s.href,
     }));
-    const skills = this.data.allSkills().map((s) => ({
-      id: `skill-${s.id}`,
-      label: s.name,
-      category: 'skill' as const,
-      href: '#skills',
-    }));
     const projects = this.data.projects().map((p) => ({
       id: `proj-${p.id}`,
       label: p.title,
       category: 'project' as const,
       href: `/projects/${p.slug}`,
     }));
-    const github = this.data.profile()?.github;
-    const actions: CommandItem[] = github
-      ? [
-          {
-            id: 'action-github',
-            label: 'Open GitHub Profile',
-            category: 'action' as const,
-            href: github,
-          },
-        ]
-      : [];
-    return [...sections, ...skills, ...projects, ...actions];
+
+    const profile = this.data.profile();
+    const options: CommandItem[] = [
+      {
+        id: 'opt-snapshot',
+        label: 'View Snapshot',
+        category: 'action' as const,
+        href: '/resume',
+      },
+    ];
+    if (profile?.linkedIn) {
+      options.push({
+        id: 'opt-linkedin',
+        label: 'Open LinkedIn',
+        category: 'action' as const,
+        href: profile.linkedIn,
+      });
+    }
+    if (profile?.email) {
+      options.push({
+        id: 'opt-email',
+        label: 'Email',
+        category: 'action' as const,
+        href: `mailto:${profile.email}`,
+      });
+    }
+
+    return [...sections, ...projects, ...options];
   });
 
   readonly filtered = computed(() => {
     const q = this.query().toLowerCase().trim();
-    if (!q) return this.allItems().slice(0, 12);
-    return this.allItems().filter((item) => item.label.toLowerCase().includes(q));
+    const items = this.allItems();
+    if (!q) return items;
+    return items.filter(
+      (item) =>
+        item.label.toLowerCase().includes(q) ||
+        this.categoryLabel(item.category).toLowerCase().includes(q),
+    );
   });
 
   constructor() {
@@ -261,9 +276,21 @@ export class CommandPaletteComponent {
   }
 
   execute(item: CommandItem): void {
-    if (item.href) {
+    if (item.href?.startsWith('mailto:')) {
+      window.location.href = item.href;
+    } else if (item.href) {
       this.nav.navigateTo(item.href);
     }
     this.close();
+  }
+
+  categoryLabel(category: CommandItem['category']): string {
+    const labels: Record<CommandItem['category'], string> = {
+      section: 'Section',
+      skill: 'Section',
+      project: 'Project',
+      action: 'Option',
+    };
+    return labels[category];
   }
 }
