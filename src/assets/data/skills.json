@@ -1,0 +1,50 @@
+[
+  {
+    "id": "frontend",
+    "name": "Frontend Engineering",
+    "skills": [
+      { "id": "f1", "name": "Angular (7–16)", "level": 92 },
+      { "id": "f2", "name": "TypeScript", "level": 90 },
+      { "id": "f3", "name": "HTML5 / CSS3", "level": 88 },
+      { "id": "f4", "name": "Reactive Forms & Routing", "level": 90 },
+      { "id": "f5", "name": "Syncfusion UI", "level": 82 },
+      { "id": "f6", "name": "jQuery", "level": 78 }
+    ]
+  },
+  {
+    "id": "backend",
+    "name": "Backend & Cloud",
+    "skills": [
+      { "id": "b1", "name": ".NET Core / C#", "level": 93 },
+      { "id": "b2", "name": "ASP.NET Core Web API", "level": 92 },
+      { "id": "b3", "name": "Azure AD (Entra ID)", "level": 88 },
+      { "id": "b4", "name": "Azure Blob Storage", "level": 85 },
+      { "id": "b5", "name": "Microsoft Graph API", "level": 84 },
+      { "id": "b6", "name": "Python (AI/Microservices)", "level": 78 }
+    ]
+  },
+  {
+    "id": "data",
+    "name": "Data & Architecture",
+    "skills": [
+      { "id": "d1", "name": "SQL Server", "level": 90 },
+      { "id": "d2", "name": "Entity Framework / EF Core", "level": 91 },
+      { "id": "d3", "name": "Microservices Architecture", "level": 88 },
+      { "id": "d4", "name": "SOLID Principles", "level": 90 },
+      { "id": "d5", "name": "Repository Pattern / DI", "level": 89 },
+      { "id": "d6", "name": "WebSockets", "level": 82 }
+    ]
+  },
+  {
+    "id": "tools",
+    "name": "Tools & Collaboration",
+    "skills": [
+      { "id": "t1", "name": "Git", "level": 92 },
+      { "id": "t2", "name": "JIRA", "level": 88 },
+      { "id": "t3", "name": "Azure Boards", "level": 85 },
+      { "id": "t4", "name": "Visual Studio / VS Code", "level": 93 },
+      { "id": "t5", "name": "SSMS", "level": 87 },
+      { "id": "t6", "name": "Agile / Scrum", "level": 90 }
+    ]
+  }
+]

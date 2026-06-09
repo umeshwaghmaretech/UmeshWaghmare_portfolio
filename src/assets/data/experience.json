@@ -1,0 +1,96 @@
+[
+  {
+    "id": "exp-1",
+    "company": "Pepper Advantage",
+    "role": "Software Developer",
+    "period": "Jan 2024 — Present",
+    "location": "Pune, India",
+    "type": "Full-time",
+    "responsibilities": [
+      "Own end-to-end application lifecycle across Dev, UAT, and Production environments",
+      "Develop and enhance LoanGuard loan processing modules and workflows",
+      "Build AI-enabled platforms including GenChat with WebSockets and Azure Blob Storage",
+      "Design microservices architecture and multi-tenant systems with dynamic rule engines",
+      "Integrate Azure AD, Microsoft Graph API, and AI/ML microservices for document processing"
+    ],
+    "achievements": [
+      "Delivered LoanGuard Lens from scratch using EF Core Code-First and Angular 16",
+      "Built GenChat AI assistant platform with real-time communication and analytics dashboards",
+      "Handle 2–3 concurrent projects with effective prioritization and timely delivery",
+      "Drive technical decisions, mentor team members, and enforce SOLID principles"
+    ]
+  },
+  {
+    "id": "exp-2",
+    "company": "Anthology",
+    "role": "Software Developer",
+    "period": "Oct 2022 — Dec 2023",
+    "location": "Remote",
+    "type": "Full-time",
+    "responsibilities": [
+      "Developed Anthology Student International — a web-based student management portal",
+      "Migrated legacy desktop VB6 application to SOA web architecture using AngularJS and ASP.NET Core MVC",
+      "Handled UI screen development, feature enhancements, and code merges",
+      "Resolved customer incidents in live production environment"
+    ],
+    "achievements": [
+      "Implemented new end-to-end features for US and non-US university clients",
+      "Improved performance with large-scale data handling",
+      "Collaborated in Agile methodology with cross-functional teams"
+    ]
+  },
+  {
+    "id": "exp-3",
+    "company": "Extentia IT Pvt. Ltd.",
+    "role": "Software Professional",
+    "period": "Aug 2021 — Sep 2022",
+    "location": "Pune, India",
+    "type": "Full-time",
+    "responsibilities": [
+      "Developed LetsGo2 flight and hotel booking SPA for European tourism market",
+      "Built Mahindra Auto website with test drive booking and product exploration features",
+      "Implemented RESTful Web Services with Angular 7, ASP.NET Core MVC, and Entity Framework",
+      "Participated in SDLC including requirements gathering, design, development, and testing"
+    ],
+    "achievements": [
+      "Delivered responsive SPAs with Entity Framework and REST API integration",
+      "Extensively worked with Git and JIRA in Agile Scrum environment",
+      "Led client discussions for sprint grooming, show & tell, and retrospectives"
+    ]
+  },
+  {
+    "id": "exp-4",
+    "company": "Fincuro Solutions",
+    "role": "Software Developer",
+    "period": "Feb 2021 — Aug 2021",
+    "location": "Pune, India",
+    "type": "Full-time",
+    "responsibilities": [
+      "Developed First West RDO — a financial product for US credit union identity verification",
+      "Built UI screens and integration APIs using AngularJS, ASP.NET Core MVC, and EF6 Code-First",
+      "Worked with client-server architecture, MVC5, Swagger API, and jQuery"
+    ],
+    "achievements": [
+      "Delivered identity verification and registration workflows for US financial clients",
+      "Developed integration APIs connecting multiple application modules"
+    ]
+  },
+  {
+    "id": "exp-5",
+    "company": "Ixia Solutions",
+    "role": "Software Developer Trainee",
+    "period": "Nov 2019 — Nov 2020",
+    "location": "Pune, India",
+    "type": "Full-time",
+    "responsibilities": [
+      "Contributed to CampusNexus student management information system",
+      "Developed UI screens for campus portal serving students, faculty, and administrators",
+      "Wrote unit tests using MOQ and integration tests",
+      "Worked with AngularJS, ASP.NET Core MVC, Entity Framework, and LINQ on SQL Server"
+    ],
+    "achievements": [
+      "Supported migration from desktop VB6 to web-based SOA architecture",
+      "Gained foundational experience in Agile development and enterprise application patterns"
+    ]
+  }
+]
